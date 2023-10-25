@@ -1,0 +1,11 @@
+clip==0.2.0
+numpy==1.21.2
+pandas==1.2.3
+Pillow==9.5.0
+PyYAML==6.0
+scikit_learn==1.2.2
+scipy==1.6.2
+six==1.16.0
+torch==1.13.1
+torchvision==0.6.1
+visdom==0.2.1

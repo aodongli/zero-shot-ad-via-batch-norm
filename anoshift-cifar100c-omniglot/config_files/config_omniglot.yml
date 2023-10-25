@@ -1,0 +1,48 @@
+model:
+  - omniglotDSVDD
+loss:
+  - center_dist
+trainer:
+  - zeroshot_meta_trainer
+device:
+  - cuda
+output_size:
+  - 32
+hidden_size:
+  - 64 # 64, 128
+layers:
+  - 4
+bn_affine:
+  - True
+k_query:
+  - 15 # 2, 5, 10, 15
+batch_size:
+  - 32
+learning_rate:
+  - 0.001
+l2:
+  - 0.
+max_iterations:
+  - 10000
+optimizer:
+  - Adam
+scheduler:
+  -
+    class: StepLR
+    args:
+      step_size: 1500
+      gamma: 0.7
+early_stopper:
+  -
+    class: Patience
+    args:
+      patience: 10000
+      use_train_loss: False
+num_repeat:
+  - 1
+save_scores:
+  - False
+log_every:
+  - 50
+result_folder:
+  - RESULTS/

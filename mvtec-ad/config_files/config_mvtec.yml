@@ -1,0 +1,26 @@
+model: feat_svdd
+loss: center_dist
+trainer: zeroshot_meta_trainer
+oc_query: False
+device: cuda
+x_dim: 1024 #1792 
+output_size: 32
+layers: 5
+bn_affine: True
+k_query: 30 # 15
+batch_size: 32 # 32, 64
+learning_rate: 0.0003 # 0.001, 0.003
+l2: 0.
+max_iterations: 50 # 6000 # 10000
+optimizer: Adam
+scheduler:
+  class: StepLR
+  args:
+    step_size: 3000
+    gamma: 0.8
+early_stopper:
+  -
+num_repeat: 1
+save_scores: False
+log_every: 2
+result_folder: RESULTS/

@@ -1,0 +1,48 @@
+model:
+  - cnn4DSVDD
+loss:
+  - center_dist
+trainer:
+  - zeroshot_meta_trainer
+device:
+  - cuda
+output_size:
+  - 32
+hidden_size:
+  - 128 # 64, 128
+layers:
+  - 4
+bn_affine:
+  - True
+k_query:
+  - 30 # 15
+batch_size:
+  - 32 # 32, 64
+learning_rate:
+  - 0.003 # 0.001, 0.003
+l2:
+  - 0.
+max_iterations:
+  - 6000 # 10000
+optimizer:
+  - Adam
+scheduler:
+  -
+    class: StepLR
+    args:
+      step_size: 3000
+      gamma: 0.8
+early_stopper:
+  -
+    class: Patience
+    args:
+      patience: 6000
+      use_train_loss: False
+num_repeat:
+  - 1
+save_scores:
+  - False
+log_every:
+  - 50
+result_folder:
+  - RESULTS/

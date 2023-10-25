@@ -1,0 +1,50 @@
+model:
+  - tabDSVDD
+loss:
+  - center_dist
+trainer:
+  - zeroshot_meta_trainer
+device:
+  - cuda
+input_size:
+  - 570
+output_size:
+  - 32
+hidden_size:
+  - 128 # 64, 128
+layers:
+  - 4
+bn_affine:
+  - True
+k_query:
+  - 512 # 2, 5, 10, 15
+batch_size:
+  - 32
+learning_rate:
+  - 0.0004
+l2:
+  - 0
+max_iterations:
+  - 1000
+optimizer:
+  - Adam
+scheduler:
+  -
+    class: StepLR
+    args:
+      step_size: 1000
+      gamma: 0.8
+early_stopper:
+  -
+    class: Patience
+    args:
+      patience: 20
+      use_train_loss: False
+num_repeat:
+  - 1
+save_scores:
+  - False
+log_every:
+  - 10
+result_folder:
+  - RESULTS/
