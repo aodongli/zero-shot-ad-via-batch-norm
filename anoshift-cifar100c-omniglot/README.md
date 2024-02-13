@@ -1,3 +1,5 @@
+Please refer to `requirements.txt` for necessary libraries.
+
 ## Omniglot
 
 1. Training
