@@ -1,4 +1,5 @@
 ## MVTec AD
+Please refer to `requirements.txt` for necessary libraries.
 
 1. Download [MVTec AD](https://www.mvtec.com/company/research/datasets/mvtec-ad) into `./data`
 2. Extract MVTec AD features. It takes several minutes.
