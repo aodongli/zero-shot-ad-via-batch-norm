@@ -8,8 +8,8 @@ Code for different datasets is shown in the folder names. Refer to each folder f
 
 Package requirements are listed in each folder's `requirements.txt`. Run `pip install -r requireme.txt` to install all packages.
 
-## Quick Introduction
-Our proposed zero-shot anomaly detection method is a simple but effective framework. One only needs to ensure i) the model is for batch-level prediction and ii) the batch norm layers are kept in the training mode even at inference time. See the comparisons against the stationary anomaly detection framework below.
+## Brief Introduction
+We introduce a straightforward yet powerful approach to zero-shot anomaly detection. This method requires minimal configurations: 1) ensure that the deep model is set for batch-level prediction and 2) maintain all batch normalization layers in the training mode during inference. Below, you'll find a step-by-step comparison with the traditional *stationary* anomaly detection framework. Key configurations are color-highlighted for clarity. 
 
 <img title="" src="./acr-diff.png" alt="acr" data-align="inline">
 
