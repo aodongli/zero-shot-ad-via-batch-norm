@@ -8,8 +8,8 @@ Code for different datasets is shown in the folder names. Refer to each folder f
 
 Package requirements are listed in each folder's `requirements.txt`. Run `pip install -r requireme.txt` to install all packages.
 
-## Brief Introduction
-We introduce a straightforward yet powerful approach to train an out-of-box deep anomaly detector into a zero-shot anomaly detector. This method requires minimal configurations: 1) ensure that the deep model is set for batch-level prediction and 2) maintain all batch normalization layers in the training mode during inference. Below, you'll find a step-by-step comparison with the traditional *stationary* anomaly detection framework. Key configurations are color-highlighted for clarity. 
+## Brief Overview
+We introduce a straightforward yet powerful approach to train an out-of-box deep anomaly detector into a zero-shot anomaly detector. This method requires minimal configurations: 1) ensure that the deep model is set for batch-level prediction and 2) maintain all batch normalization layers in the training mode during inference. Below, you'll find a step-by-step comparison with the traditional *stationary* anomaly detection framework. Key configurations are color-highlighted for clarity. More details can be found in the full paper.
 
 <img title="" src="./acr-diff.png" alt="acr" data-align="inline">
 
